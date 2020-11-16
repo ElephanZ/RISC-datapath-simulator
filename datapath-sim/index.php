@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="it">
-	<head>
-		<meta charset="utf-8"/>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-		<meta name="author" content="Antonio Scardace">
+    <head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+	<meta name="author" content="Antonio Scardace">
         
         <link rel="stylesheet" href="../font-awesome/css/all.css">
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="css/dp.css?v=<?php echo time(); ?>">
 
-		<link rel="icon" type="image/png" sizes="32x32" href="../imgs/logo.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../imgs/logo.png">
     	<link rel="icon" type="image/png" sizes="16x16" href="../imgs/logo.png">
 		<title>Datapath Simulator</title>
     </head>
@@ -103,49 +103,6 @@
         <script src="../js/jquery.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
         <script src="js/dp.js?v=<?php echo time(); ?>"></script>
-        <script type="text/javascript">
-            
-            $(document).ready(() => {
-                $('#stepBack, #stepForward, .srcInput, .stage, .interstageRegisters, .controlSignals').hide();
-
-                $('#instruction').change(() => {
-                    stageOne(); 
-                    resetButtons(false);
-                    updateSignalControls();
-                    updateRegisters();
-                    updateDrawing();
-                });
-                $('#startBtn').on('click', () => {
-                    if (hasThree) operand_f = $('#firstOperand').val(), operand_s = $('#secondOperand').val();
-                    else operand_f = $('#firstOperand').val().split('(')[0], operand_s = $('#firstOperand').val().split('(')[1].slice(0, -1);
-
-                    if (checkInputValues()) {
-                        setOperands();
-                        resetButtons(true);
-                        ++t;
-                        updateRegisters();
-                        updateSignalControls();
-                        updateDrawing();
-                    }
-                });
-                $('#stepBack').on('click', () => {
-                    t -= t > 1 ? 1 : 0; 
-                    updateRegisters();
-                    updateSignalControls();
-                    updateDrawing();
-                });
-                $('#stepForward').on('click', () => {
-                    t += t < 5 ? 1 : 0; 
-                    updateRegisters();
-                    updateSignalControls();
-                    updateDrawing();
-                });
-                $('input[type=radio][name="regEncoding"]').change(() => {
-                    encoding = $('input[type=radio][name="regEncoding"]:checked').val();
-                    convertRegisters();
-                });
-            });
-
-        </script>
+        <script src="js/home.js?v=<?php echo time(); ?>"></script>
     </body>
 </html>
