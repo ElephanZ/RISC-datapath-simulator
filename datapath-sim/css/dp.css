@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../../fonts/Montserrat.ttf)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat'
+}
+
+.intro {
+    width: 100%;
+    padding-top: 1.75rem;
+    text-align: center;
+}
+.intro h1 {
+    font-size: 35px
+}
+.intro h5 {
+    font-size: 18px
+}
+
+.container-fluid {
+    width: 90%;
+    margin-left: 5%
+}
+.container-fluid .row {
+    margin-top: 5.3vh
+}
+
+.container-fluid .row .cvs {
+    width: 100%;
+    height: auto
+}
+.container-fluid .row .cvs img {
+    width: auto;
+    height: 75vh;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.container-fluid .row .info {
+    width: 100%
+}
+.container-fluid .row .info .form-control {
+    display: inline-block;
+    font-size: 14.5px;
+    letter-spacing: 1.1px;
+}
+.container-fluid .row .info select {
+    width: 100%
+}
+.container-fluid .row .fa-arrow-right {
+    margin-left: 5px
+}
+.container-fluid .row .fa-arrow-left {
+    margin-right: 5px
+}
+
+.container-fluid .row .info .srcInput {
+    margin-top: 9px;
+    margin-bottom: 9px
+}
+.container-fluid .row .info #startBtn {
+    width: 100%;
+    font-size: 14.5px
+}
+.container-fluid .row .info #stepBack, .container-fluid .row .info #stepForward {
+    width: 49.5%; 
+    font-size: 14.5px
+}
+.container-fluid .row .info .stage {
+    margin-top: 5.3vh;
+    width: 100%;
+    text-align: center;
+    font-size: 32.5px
+}
+
+.container-fluid .row .info .interstageRegisters, .controlSignals {
+    width: 100%;
+    font-size: 14px
+}
+.container-fluid .row .info .interstageRegisters {
+    margin-top: 4.5vh
+}
+.container-fluid .row .info .controlSignals {
+    margin-top: 5px
+}
+.table th {
+    padding: .5rem .75rem 
+}
+.container-fluid .row .info p {
+    margin-bottom: .5rem;
+    font-weight: 800;
+    font-size: 18px
+}
+.container-fluid .row .info label {
+    margin-bottom: 1rem;
+    margin-right: 1rem
+}
